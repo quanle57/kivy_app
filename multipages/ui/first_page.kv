@@ -1,0 +1,59 @@
+
+<FirstWindowLayout>:
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "first Screen"
+            font_size: 30
+            color: (0, 0,0,1)
+
+        GridLayout:
+            cols: 2
+            rows: 3
+            # Row
+            Label:
+                text: "First Name"
+                font_size: 30
+                color: (0, 0, 1, 1)
+            
+            TextInput:
+                id: first_name
+                text: ""
+                halign: "center"
+                font_size: 30
+            
+            # Row
+            Label:
+                text: "last Name"
+                font_size: 30
+                color: (0, 0, 1, 1)
+            
+            TextInput:
+                id: last_name
+                text: ""
+                halign: "center"
+                font_size: 30
+            
+            # Row
+            Label:
+                text: "Favorite Color"
+                font_size: 30
+                color: (0, 0, 1, 1)
+            
+            TextInput:
+                id: color
+                text: ""
+                halign: "center"
+                font_size: 30
+
+        Button:
+            text: "Switch to Second Page"
+            font_size: 30
+            background_color: (204/255, 1,1,1)
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = 'left'
+            on_press: root.set_data()

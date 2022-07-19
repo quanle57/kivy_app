@@ -5,7 +5,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 
 # Set the appp size
-Window.size = (500, 700)
+# Window.size = (500, 700)
 
 Builder.load_file('calculatorapp.kv')
 
